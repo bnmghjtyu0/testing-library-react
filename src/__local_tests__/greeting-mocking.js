@@ -13,6 +13,6 @@ test('loads greetings on click', async () => {
   input.value = 'Marry'
   fireEvent.click(button)
   await waitFor(() =>
-    expect(getByLabelText(/greeting/i)).toHaveTextContent('TEXT_GREETING'),
+    expect(getByLabelText(/greeting/i)).toHaveTextContent('TEST_GREETING'),
   )
 })
