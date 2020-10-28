@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {queries, getQueriesForElement} from '@testing-library/dom'
+import {queries, getQueriesForElement} from '@testing-library/no-dom-import'
 import {FavoriteNumber} from '../../favorite-number'
 
 test('renders a number input with a label "Favorite Number"', () => {
