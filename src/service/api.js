@@ -1,5 +1,3 @@
-import React from 'react'
-
 const greetings = ['Hello', 'Hi', 'Hey there', `What's up`, 'Howdy', `G'day`]
 
 const sleep = (time) =>

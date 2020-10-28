@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import ReactDOM from 'react-dom'
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import {v4 as uuidv4} from 'uuid'
 import './styles.css'
 
 function TodoList() {
+  const nodeRef = React.useRef(null)
   const [inProp, setInProp] = useState(false)
   const [items, setItems] = useState([
     {id: uuidv4(), text: 'Buy eggs'},
@@ -14,9 +14,9 @@ function TodoList() {
   ])
   return (
     <div>
-      <TransitionGroup className="todo-list">
+      {/* <TransitionGroup className="todo-list">
         {items.map(({id, text}) => (
-          <CSSTransition timeout={200} classNames="item">
+          <CSSTransition in={inProp} timeout={200} classNames="item">
             <div
               style={{
                 borderColor: '#333',
@@ -49,6 +49,18 @@ function TodoList() {
         }}
       >
         Add Item
+      </button> */}
+
+      <CSSTransition
+        nodeRef={nodeRef}
+        in={inProp}
+        timeout={200}
+        classNames="my-node"
+      >
+        <div ref={nodeRef}>{"I'll receive my-node-* classes"}</div>
+      </CSSTransition>
+      <button type="button" onClick={() => setInProp((state) => true)}>
+        Click to Enter
       </button>
     </div>
   )

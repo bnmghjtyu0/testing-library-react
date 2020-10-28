@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles.css'
 import {FavoriteNumber} from './favorite-number'
 import Form from './Form'
 import {GreetingLoader} from './greeting-mocking'
