@@ -15,9 +15,14 @@ async function fetchRandomGreeting() {
 
 async function fetchMovies(method, params, callback) {
   const paramsString = new URLSearchParams(Object.entries(params)).toString()
-  return fetch(`https://api.themoviedb.org/3/${method}?api_key=23785b1559bb39249c40d56934f80e6c&${paramsString}`)
+  return fetch(
+    `https://api.themoviedb.org/3/${method}?api_key=23785b1559bb39249c40d56934f80e6c&${paramsString}`,
+  )
     .then((res) => res.json())
     .then((json) => json.results)
 }
-
-export {loadGreeting, fetchMovies}
+async function reportError() {
+  await sleep(1000)
+  return {success: true}
+}
+export {loadGreeting, fetchMovies, reportError}
