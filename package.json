@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "identity-obj-proxy": "^3.0.0",
     "kcd-scripts": "^6.6.0"
   }
 }

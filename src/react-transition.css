@@ -1,0 +1,14 @@
+.fadeR-enter {
+  opacity: 0;
+}
+.fadeR-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.fadeR-exit {
+  opacity: 1;
+}
+.fadeR-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
+}

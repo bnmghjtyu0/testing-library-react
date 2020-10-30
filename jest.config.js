@@ -4,6 +4,9 @@ module.exports = {
   ...config,
   // we have no coverageThreshold on this project...
   coverageThreshold: {},
+  moduleNameMapper: {
+    '\\.(css|less|scss)$': 'identity-obj-proxy', // `npm install -D identity-obj-proxy`
+  },
   testMatch: [
     '**/__tests__/**/*.+(js|jsx|ts|tsx)',
     '**/__local_tests__/**/*.+(js|jsx|ts|tsx)',
